@@ -1,0 +1,21 @@
+{
+  "name": "storage",
+  "version": "1.0.0",
+  "description": "Application to manage storage",
+  "private": true,
+  "scripts": {
+    "runDev": "nodemon app.js"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "winston": "^3.7.2"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
