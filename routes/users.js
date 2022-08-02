@@ -9,7 +9,7 @@ app.use(express.json())
 router.get('/', async (req, res) => {
     try {
         const users =
-            await pool.query(`SELECT us.id, username, name 
+            await pool.query(`SELECT us.id, name, username, description, active
             FROM user us
             JOIN role ro ON (ro.id = us.role_id)
             WHERE active`)
