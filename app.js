@@ -9,7 +9,8 @@ const winston = require('winston')
 
 const indexRouter = require('./routes/index')
 const usersRouter = require('./routes/users')
-const filesRouter = require('./routes/files')
+const uploadFilesRouter = require('./routes/uploadFiles')
+const getFilesRouter = require('./routes/getFiles')
 
 const logConfiguration = {
     'transports': [
@@ -38,7 +39,9 @@ app.use(cors())
 
 app.use('/', indexRouter)
 app.use('/users', usersRouter)
-app.use('/files', filesRouter)
+app.use('/upload_files', uploadFilesRouter)
+app.use('/get_files', getFilesRouter)
+
 
 app.listen(process.env.PORT || 3001, () => console.log(`Server running on port ${process.env.PORT}`))
 
